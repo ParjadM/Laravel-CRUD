@@ -8,3 +8,5 @@ Route::get('/', function () {
 });
 
 Route::resource('students', StudentController::class);
+
+Route::get('students/{student}/destroy', [StudentController::class, 'destroy'])->name('students.destroy');
